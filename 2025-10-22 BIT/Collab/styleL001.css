@@ -1,0 +1,158 @@
+:root {
+    --main-color-ligth: #9A54BC;
+    --main-color-dark: #60267F;
+    --main-text-color: #A79d9d;
+}
+
+.linas .main {
+    flex-direction: column;
+    margin: 182px auto 0;
+    position: relative;
+    width: 1600px;
+    justify-content: center;
+    margin-bottom: 400px;
+}
+
+.linas .main h2 {
+    font-size: 31px;
+}
+
+.linas .main p {
+    text-align: center;
+    padding-top: 40px;
+    font-size: 16px;
+
+}
+
+.linas .main button {
+    margin: 30px 0 0 0;
+    padding: 15px;
+    background-color: var(--main-color-ligth);
+    border: 1px solid var(--main-color-ligth);
+    color: white;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.linas .main button:hover {
+    background-color: transparent;
+    color: #9A54BC;
+}
+
+/* Pradedu paveiksliuku stumdyma 9:59 AM */
+
+.linas .main .images {
+    margin: 15px 0 0 0;
+}
+
+
+.linas .main .images .i01linija {
+    z-index: -1;
+    align-self: flex-start;
+    position: absolute;
+    width: 75%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.linas .main .images .i02 {
+    z-index: 0;
+    position: absolute;
+    min-width: 5.2%;
+    min-height: 5.2%;
+    border-radius: 50%;
+    left: 9.3%;
+    top: 71%;
+
+}
+
+.linas .main .images .i03 {
+    z-index: 0;
+    position: absolute;
+    min-width: 5.2%;
+    min-height: 5.2%;
+    border-radius: 50%;
+    left: 19%;
+    top: 169%;
+
+}
+
+.linas .main .images .i04 {
+    z-index: 0;
+    position: absolute;
+    min-width: 5.2%;
+    min-height: 5.2%;
+    border-radius: 50%;
+    left: 32%;
+    top: 157%;
+
+}
+
+.linas .main .images .i05 {
+    z-index: 0;
+    position: absolute;
+    min-width: 5.2%;
+    min-height: 5.2%;
+    border-radius: 50%;
+    left: 42%;
+    top: 194%;
+
+}
+
+.linas .main .images .i06 {
+    z-index: 0;
+    position: absolute;
+    min-width: 5.2%;
+    min-height: 5.2%;
+    border-radius: 50%;
+    left: 55%;
+    top: 207%;
+
+}
+
+.linas .main .images .i07 {
+    z-index: 0;
+    position: absolute;
+    min-width: 5.2%;
+    min-height: 5.2%;
+    border-radius: 50%;
+    left: 68%;
+    top: 191%;
+
+}
+
+.linas .main .images .i08 {
+    z-index: 0;
+    position: absolute;
+    min-width: 5.2%;
+    min-height: 5.2%;
+    border-radius: 50%;
+    left: 80%;
+    top: 199%;
+
+}
+
+.linas .main .images .i09 {
+    z-index: 0;
+    position: absolute;
+    min-width: 5.2%;
+    min-height: 5.2%;
+    border-radius: 50%;
+    left: 84%;
+    top: 146%;
+
+}
+
+.linas .main .images span {
+    z-index: 0;
+    position: absolute;
+    width: 24px;
+    height: 14px;
+    font-size: 16px;
+    color: var(--main-color-ligth);
+    left: 76%;
+    top: 137%;
+
+}

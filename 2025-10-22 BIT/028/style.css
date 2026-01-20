@@ -1,0 +1,14 @@
+        .sq1, .sq2 {
+            width: 200px;
+            height: 200px;
+        }
+        .sq1 {
+            background-color: brown;
+            position: relative;
+        }
+        .sq2 {
+            background-color: cornflowerblue;
+            position: absolute;
+            top: 400px;
+            left: 400px;
+        }

@@ -1,0 +1,178 @@
+/* birute Css */
+
+.feedbackSection {
+  margin-top: 70px;
+  flex-direction: column;
+}
+ 
+.feedbackArrows {
+  width: 90%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+ 
+.feedbackArrows img {
+  height: 50px;
+  margin-top: 25px;
+}
+ 
+.feedbackRating {
+  width: 200px;
+}
+ 
+.feedbackDiv {
+  margin: 70px 0;
+  width: 770px;
+  font-weight: 500;
+  /* font-size: 14px; */
+}
+ 
+.feedbackDesignation {
+  margin: 30px;
+  text-align: center;
+}
+ 
+.feedbackFace {
+  width: 70px;
+}
+ 
+.FeedbackComment {
+  padding: 0 15px 10px 15px;
+}
+
+/* Ruta css */
+
+.downloadSection {
+    flex-direction: column;
+    height: 400px;
+    row-gap: 23px;
+    background-color: #9A54BC;
+    justify-content: center;
+    align-items: center;
+}
+ 
+.downloadSection h1 {
+    font-size: 62px;
+    text-align: center;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+}
+ 
+.downloadSection button {
+    padding: 15px;
+    width: 140px;
+    background-color: #9A54BC;
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+    font-weight: 700;
+}
+ 
+.downloadButtons {
+    gap: 20px;
+}
+ 
+.downloadSection button.freeDemo {
+    background-color: #FFFFFF;
+    color: #9A54BC
+}
+ 
+.downloadSection button:hover {
+    background-color: #FFFFFF;
+    color: #9A54BC;
+}
+
+/* CSS Vilius */
+
+.map {
+    display: flex;
+    width: 100%;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #E2BDF21C;
+}
+ 
+.mapLeft {
+    width: 47%;
+    text-align: center;
+ 
+}
+ 
+.mapLeftBig {
+    margin: 50px;
+}
+ 
+.mapLeftSmall {
+    gap: 50px;
+    color: black;
+    font-weight: 500;
+}
+
+/* Vilius bottom */
+
+.footer {
+    background-color: #60267F;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+}
+ 
+.contacts {
+    margin: 150px auto 0 auto;
+    padding: 0 0 0 20%;
+    display: flex;
+    width: 95%;
+    justify-content: flex-start;
+    text-align: left;
+}
+ 
+.contactsLeft {
+    display: flex;
+    flex-direction: column;
+    width: 47%;
+}
+ 
+.contactsLeft img {
+    width: 110px;
+}
+ 
+.contactsIcons {
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+ 
+.contactsIcons span img {
+ 
+    width: 40px;
+}
+ 
+.contactsLeftBlock {
+    font-weight: 300;
+}
+ 
+.contactsFollow {
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+.contactsLentele {
+    width: 46%;
+}
+.contactsLentele th {
+    width: 32%;
+}
+.contactsLentele table tr td{
+    height: 50px;
+    color: #60267F;
+    font-weight: 300;
+}
+.contactsLentele table th {
+    color: black;
+}

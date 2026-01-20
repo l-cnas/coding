@@ -1,0 +1,75 @@
+
+.body {
+    font-family: "Rajdhani", sans-serif;
+    width: 80%;
+    padding: 0 10%;
+    margin: 0;
+}
+
+
+h1 {
+    color: green;
+    font-family: "Rajdhani", sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.eve h2 {
+    color: #00bfff;
+}
+
+.eve p i {
+    color:#00bfff;
+    font-family: "Rajdhani", sans-serif;
+}
+
+.hd2 h2 {
+    color: #ff4444;
+}
+
+.hd2 p i {
+    color:#ff4444;
+    font-family: "Rajdhani", sans-serif;
+}
+
+.lol h2 {
+    color: #aa00ff;
+}
+
+.lol p i {
+    color:#aa00ff;
+    font-family: "Rajdhani", sans-serif;
+}
+
+.ss h2 {
+    color: #00aa55;
+}
+
+.ss p i {
+    color:#00aa55;
+    font-family: "Rajdhani", sans-serif;
+}
+
+.gs h2 {
+    color: #f4b400;
+}
+
+.gs p i {
+    color:#f4b400;
+    font-family: "Rajdhani", sans-serif;
+}
+
+.outside {
+    width: calc(33.3333% - 30px);
+    box-sizing: border-box;
+    background-color: #024257;
+    min-width: 300px;
+    height: 215px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 1px 0px;
+    align-content: center;
+    text-align: center;
+    
+}

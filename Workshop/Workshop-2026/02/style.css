@@ -1,0 +1,45 @@
+.containerOne {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    height: 400px;
+    width: 1000px;
+    border: solid black 2px;
+}
+
+.containerTwo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid crimson 2px;
+    width: 90%;
+    height: 90%;
+}
+
+/* antras */
+
+.u2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    width: 750px;
+    height: 700px;
+    border: solid black 2px;
+}
+
+.u2 .card {
+    margin-top: 5px;
+    border: solid black 2px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 230px;
+    height: 300px;
+}
+
+.u2 .lastCard {
+    justify-content: flex-start;
+    align-items: flex-start;
+}

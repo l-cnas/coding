@@ -1,0 +1,30 @@
+body {
+    font-family: "Rajdhani", sans-serif;
+    background-color: black;
+    margin: 0;
+}
+
+.vienas {
+    color: mediumseagreen;
+}
+
+.du {
+    color: palevioletred;
+}
+
+section{
+    font-size: 0px;
+}
+
+.box {
+    box-sizing: border-box;
+    border: 2px solid rgb(187, 7, 46);
+    width: calc(33.3333% - 33px);
+    height: 100px;
+    display: inline-block;
+    font-size: 16px;
+    min-width: 200px;
+    vertical-align: top;
+    margin: 0 15px;
+}
+ 

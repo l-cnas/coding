@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./listStyle.css">
+    <script src="./list.js" defer></script>
+</head>
+<body>
+     <main class="list-page">
+      <header class="list-header">
+        <h1>PVM Sąskaitų Faktūrų sąrašas</h1>
+
+        <div class="list-actions no-print">
+          <button id="btnNewInvoice" type="button">Nauja sąskaita (API)</button>
+          <button id="btnClearAll" type="button">Išvalyti viską</button>
+        </div>
+      </header>
+
+      <section class="list-table-wrap">
+        <table class="list-table" id="invoiceTable">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Numeris</th>
+              <th>Data</th>
+              <th>Viso su PVM</th>
+              <th class="no-print">Veiksmai</th>
+            </tr>
+          </thead>
+
+          <tbody id="invoiceTbody">
+            <!-- JS dalis -->
+          </tbody>
+        </table>
+
+        <p id="emptyText" class="empty-text" style="display: none;">
+          Nėra išsaugotų sąskaitų. Sugeneruok naują sąskaitą iš API ir spausk
+          “Išsaugoti”.
+        </p>
+      </section>
+    </main>
+</body>
+</html>

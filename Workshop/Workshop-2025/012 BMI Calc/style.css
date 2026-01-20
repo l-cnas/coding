@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to bottom right, hotpink, darkred);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.container {
+    background-color: rgb(233, 102, 124);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    gap: 15px;
+    box-shadow: 10px 10px 5px 0px rgba(58, 55, 55, 0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(58, 55, 55, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(58, 55, 55, 0.75);
+
+}
+
+p {
+    margin-left: 10px;
+}
+
+input {
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: bisque;
+    border: 1px solid grey;
+
+}
+
+button {
+    background: linear-gradient(to bottom right, hotpink, darkred);
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    box-shadow: 5px 5px 5px 0px rgba(58, 55, 55, 0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(58, 55, 55, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(58, 55, 55, 0.75);
+}

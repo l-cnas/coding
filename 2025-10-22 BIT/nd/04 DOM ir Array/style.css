@@ -1,0 +1,91 @@
+section[data-ketvirtas] {
+    display: flex;
+
+}
+
+.circle {
+    width: 120px;
+    height: 120px;
+    background-color: blue;
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+}
+
+/* // penktas */
+
+section[data-penktas] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.red-circle {
+  width: 120px;
+  height: 120px;
+  background-color: red;
+  color: white;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: bold;
+  text-align: center;
+}
+
+
+/* Sestas */
+
+section[data-sestas] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.green-circle {
+  width: 120px;
+  height: 120px;
+  background-color: green;
+  color: white;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Septintas */
+
+section[data-septintas] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.yellow-circle {
+  width: 40px;
+  height: 40px;
+  background-color: yellow;
+  color: black;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: bold;
+}

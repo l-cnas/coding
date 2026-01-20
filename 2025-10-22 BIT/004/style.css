@@ -1,0 +1,18 @@
+
+
+
+h1 span{
+    color: #098765
+}
+
+h1 {
+    color: #83b828;
+    font-size: 40px;
+    font-weight: 400;
+    font-family: "Rajdhani", sans-serif;
+    letter-spacing: 2px;
+}
+
+span {
+    color: #ff0000;
+}

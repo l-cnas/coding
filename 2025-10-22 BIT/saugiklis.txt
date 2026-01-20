@@ -1,0 +1,7 @@
+let saugiklis = 100;
+
+saugiklis--
+if(!saugiklis) {
+    console.log('Suveike saugiklis');``
+    break;
+}

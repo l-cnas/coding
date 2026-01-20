@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ 
+body {
+    background-color: darkslateblue;
+    color: white;
+    height: 100vh;
+    text-transform: uppercase;
+}
+ 
+section {
+    flex-direction: column;
+}
+ 
+h1 {
+    font-size: 50px;
+    text-align: center;
+}
+ 
+.year {
+    font-size: 80px;
+    font-weight: 600;
+    margin: 30px;
+ 
+}
+ 
+.countdown {
+    width: 90%;
+    justify-content: space-between;
+}
+ 
+.cell {
+    font-size: 40px;
+    background-color: rgb(94, 94, 177);
+    width: 120px;
+    height: 120px;
+    flex-direction: column;
+    border-radius: 10px;
+    gap: 5px;
+}
+ 
+.label {
+    font-size: 14px;
+}

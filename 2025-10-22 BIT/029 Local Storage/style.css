@@ -1,0 +1,68 @@
+        .sq1,
+        .sq2 {
+            width: 200px;
+            height: 200px;
+        }
+
+        .sq1 {
+            background-color: brown;
+            position: relative;
+        }
+
+        .sq2 {
+            background-color: cornflowerblue;
+            position: absolute;
+            top: 400px;
+            left: 400px;
+        }
+
+
+        .mygtukai {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .green,
+        .red,
+        .blue,
+        .clear {
+            width: 60px;
+            height: 60px;
+            border: none;
+            border-radius: 8px;
+            margin: 10px;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+
+        .clear {
+            background-color: gray;
+        }
+
+        .spalvosCia {
+            display: flex;
+            gap: 5px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .spalvosKv {
+            width: 40px;
+            height: 40px;
+            border-radius: 6px;
+            border: 2px solid #444;
+            margin: 4px;
+        }
