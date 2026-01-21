@@ -1,0 +1,160 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #bfbfbf;
+}
+
+.mainwhiteArea {
+    max-width: 1024px;
+    min-width: 480px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 40px 0;
+}
+
+h1 {
+    width: 650px;
+    margin: 0 auto 20px;
+    color: #6b6b6b;
+    font-size: 44px;
+    text-align: left;
+}
+
+.photoText {
+    width: 650px;
+    margin: 0 auto 20px;
+    padding: 20px 0;
+    list-style: none;
+    background: #e41414;
+    color: #fff;
+    text-align: center;
+}
+
+.photoText li {
+    display: none;
+}
+
+.photoText li.act {
+    display: block;
+}
+
+.photoText h2 {
+    margin: 0;
+    font-size: 30px;
+}
+
+.galleryCnt {
+    width: 520px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.galeryMain {
+    height: 420px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background: orange;
+    position: relative;
+    overflow: hidden;
+}
+
+.galeryMain li {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+}
+
+.galeryMain li.act {
+    opacity: 1;
+}
+
+.galeryMain img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.prevCnt,
+.nextCnt,
+.centerBtn {
+    background: #e41414;
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+}
+
+.prevCnt,
+.nextCnt {
+    width: 45px;
+    height: 45px;
+    bottom: 80px;
+}
+
+.prevCnt {
+    left: -10px;
+}
+
+.nextCnt {
+    right: -10px;
+}
+
+.centerBtn {
+    width: 90px;
+    height: 90px;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.prevCnt img,
+.nextCnt img,
+.centerBtn img {
+    width: 18px;
+    filter: invert(1);
+}
+
+.centerBtn img {
+    width: 28px;
+}
+
+.bottomCnt {
+    width: 450px;
+    margin: 20px auto 0;
+    overflow: hidden;
+}
+
+.previewCnt {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    justify-content: flex-start;
+    transform: translateX(0);
+}
+
+.previewCnt li {
+    flex: 0 0 auto;
+    width: 60px;
+    height: 60px;
+    background: #e41414;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.previewCnt li.act {
+    outline: 3px solid #b10000;
+}
+
+.previewCnt img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
