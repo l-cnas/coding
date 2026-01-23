@@ -1,0 +1,27 @@
+ul li:first-child,
+ol li:first-child {
+    font-weight: 700;
+}
+
+ul li:nth-child(2),
+ol li:nth-child(2) {
+    font-weight: 700;
+}
+
+ul li:last-child,
+ol li:last-child {
+    font-weight: 700;
+}
+
+/* .trecias ol {
+    background: red;
+} */
+
+body>div:last-child>ul,
+body>div:last-child>ol {
+    background: red;
+}
+
+ol li:last-child {
+    font-style: italic;
+}
