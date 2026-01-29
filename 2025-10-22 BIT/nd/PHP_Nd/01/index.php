@@ -118,7 +118,7 @@ echo "Gauta nuliu: $uz5Nuliai , vienetu: $uz5Vienetai , dvejetu: $uz5Dvejetai ."
 
 echo "<br><br> Uzdavinys 6. <br>";
 
-$uz6Kintamasis = rand(1,6);
+$uz6Kintamasis = rand(1, 6);
 
 echo "<h$uz6Kintamasis>$uz6Kintamasis</h$uz6Kintamasis>";
 
@@ -129,7 +129,8 @@ echo "<br><br> Uzdavinys 7. <br>";
 
 
 
-function spalvink($a, $b) {
+function spalvink($a, $b)
+{
     $i = -1;
     $u7Masyvas = [];
     while (count($u7Masyvas) < 3) {
@@ -154,7 +155,8 @@ echo "<br><br> Uzdavinys 8. <br>";
 
 
 
-function u8Zvakes($a, $b) {
+function u8Zvakes($a, $b)
+{
     $u8ZvakiuSkaicius = rand($a, $b);
     if ($u8ZvakiuSkaicius < 1000) {
         echo "Perkama $u8ZvakiuSkaicius zvakes uz $u8ZvakiuSkaicius eur.";
@@ -166,3 +168,39 @@ function u8Zvakes($a, $b) {
 };
 
 u8Zvakes(5, 3000);
+
+// ------------------------------ 9.
+
+echo "<br><br> Uzdavinys 9. <br>";
+
+$u9sk1 = rand(0, 100);
+$u9sk2 = rand(0, 100);
+$u9sk3 = rand(0, 100);
+
+$numbers = [$u9sk1, $u9sk2, $u9sk3];
+
+$avg1 = array_sum($numbers) / count($numbers);
+
+$filtered = [];
+
+foreach ($numbers as $n) {
+    if ($n >= 10 && $n <= 90) {
+        $filtered[] = $n;
+    }
+}
+
+if (count($filtered) > 0) {
+    $avg2 = array_sum($filtered) / count($filtered);
+} else {
+    $avg2 = "nėra reikšmių";
+}
+
+echo "Skaičiai: " . implode(", ", $numbers) . "<br>";
+echo "Pirmas vidurkis: " . round($avg1) . "<br>";
+echo "Antras vidurkis: ";
+
+if (is_numeric($avg2)) {
+    echo round($avg2);
+} else {
+    echo $avg2;
+}
