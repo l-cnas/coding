@@ -204,3 +204,37 @@ if (is_numeric($avg2)) {
 } else {
     echo $avg2;
 }
+
+
+// ------------------------------ 10.
+
+echo "<br><br> Uzdavinys 10. <br>";
+
+$h = rand(0, 23);
+$m = rand(0, 59);
+$s = rand(0, 59);
+
+$addSeconds = rand(0, 300);
+
+$beforeTotal = $h * 3600 + $m * 60 + $s;
+$afterTotal = ($beforeTotal + $addSeconds) % (24 * 3600);
+
+$before = sprintf("%02d:%02d:%02d", $h, $m, $s);
+
+$afterH = intdiv($afterTotal, 3600);
+$afterM = intdiv($afterTotal % 3600, 60);
+$afterS = $afterTotal % 60;
+
+$after = sprintf("%02d:%02d:%02d", $afterH, $afterM, $afterS);
+
+echo "Laikrodis pries: $before<br>";
+echo "Pridedamos sekundes: $addSeconds<br>";
+echo "Laikrodis po: $after<br>";
+
+
+// ------------------------------ 11.
+
+echo "<br><br> Uzdavinys 11. <br>";
+
+
+echo "<br><br> i am confusion... <br>";
