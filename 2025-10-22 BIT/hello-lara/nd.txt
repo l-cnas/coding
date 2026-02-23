@@ -1,0 +1,3 @@
+// padaryti sumatorių kuris suvedus suma/8/9 rodytų "8 + 9 = 17"
+// reikia naujo kontrolerio, metodo, routo ir blade failo
+ 

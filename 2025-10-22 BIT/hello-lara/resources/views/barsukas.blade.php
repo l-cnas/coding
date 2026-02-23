@@ -1,2 +1,2 @@
-<h1>Labas Barsukas</h1>
-<p>Kaip sekasi?</p>
+<h1>Labas, Barsukai!</h1>
+<p>Čia yra Barsukų puslapis.</p>
