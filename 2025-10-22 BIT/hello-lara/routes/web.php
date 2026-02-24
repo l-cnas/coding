@@ -3,7 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BebrasController;
 use App\Http\Controllers\BarsukasController;
-use App\Http\Controllers\SumatoriusController;
+use App\Http\Controllers\BijunasController as B; // sutrumpinam iki B
+use App\Http\Controllers\FormController as F; // sutrumpinam iki B
 
 /*
 |--------------------------------------------------------------------------
@@ -49,4 +50,6 @@ Route::get('/paprastas/barsukas', [BarsukasController::class, 'paprastasBarsukas
 // padaryti sumatorių kuris suvedus suma/8/9 rodytų "8 + 9 = 17"
 // reikia naujo kontrolerio, metodo, routo ir blade failo
 
-Route::get('/suma/{a}/{b}', [SumatoriusController::class, 'suma']);
+Route::get('/bijunas', [B::class, 'startas']);
+
+Route::get('/get', [F::class, 'showGetForm']);
