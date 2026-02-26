@@ -5,8 +5,8 @@ use App\Http\Controllers\BebrasController;
 use App\Http\Controllers\BarsukasController;
 use App\Http\Controllers\BijunasController as B; // sutrumpinam iki B
 use App\Http\Controllers\FormController as F;
-use App\Http\Controllers\PostSumatoriusController;
-use App\Http\Controllers\SkaiciaiController;
+use App\Http\Controllers\SkaiciusController as S;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,7 +23,7 @@ Route::get('/', function () {
 });
 
 
-Route::get('/bebras', function () {
+Route::get('/bebras', function() {
     return '<h1>Labas bebrai</h1>';
 });
 
@@ -77,16 +77,9 @@ Route::get('/sdfdg4fdh6g4fd6fsdafjhsdiufdsa', [F::class, 'fancy']);
 // po post metodoto turi būti redirectas
 // reikia naujo kontrolerio, metodų, routų ir bladų failų
 
-Route::get('/post-suma', [PostSumatoriusController::class, 'forma'])
-    ->name('post.suma.forma');
-
-Route::post('/post-suma', [PostSumatoriusController::class, 'skaiciuoti'])
-    ->name('post.suma.skaiciuoti');
-
-Route::get('/post-suma/rezultatas', [PostSumatoriusController::class, 'rezultatas'])
-    ->name('post.suma.rezultatas');
-
-
+Route::get('/du-skaiciai', [S::class, 'forma2Skaiciai']);
+Route::post('/du-skaiciai-rezultatas', [S::class, 'formos2SkaiciaiApdorojimas'])->name('apdorojimas-2');
+Route::get('/du-skaiciai-rezultatas', [S::class, 'formos2SkaiciaiRezultatas'])->name('rodymas-2');
 
 // padaryti surinkėją kuris yra POST forma
 // į formą suvedus skaičių 7
@@ -98,11 +91,8 @@ Route::get('/post-suma/rezultatas', [PostSumatoriusController::class, 'rezultata
 // reikia naujo kontrolerio, metodų, routų ir bladų failų
 // dar galit pagalvoti apie mygtuką, kuris viską ištrina
 
-Route::get('/skaiciai', [SkaiciaiController::class, 'index'])
-    ->name('skaiciai.index');
+Route::get('/trys-skaiciai', [S::class, 'forma3Skaiciai']);
+Route::post('/trys-skaiciai-rezultatas', [S::class, 'formos3SkaiciaiApdorojimas'])->name('apdorojimas-3');
+Route::get('/trys-skaiciai-rezultatas', [S::class, 'formos3SkaiciaiRezultatas'])->name('rodymas-3');
 
-Route::post('/skaiciai', [SkaiciaiController::class, 'prideti'])
-    ->name('skaiciai.prideti');
-
-Route::post('/skaiciai/isvalyti', [SkaiciaiController::class, 'isvalyti'])
-    ->name('skaiciai.isvalyti');
+Route::post('/valyti', [S::class, 'formos3SkaiciaiValymas'])->name('valom-lauka');
