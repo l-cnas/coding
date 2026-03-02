@@ -1,0 +1,18 @@
+includes:
+    - vendor/phpstan/phpstan-laravel/extension.neon
+
+parameters:
+    level: 5
+    paths:
+        - app
+        - config
+        - routes
+        - tests
+    
+    ignoreErrors:
+        # Laravel facades are dynamic, allow undefined methods
+        - '#Undefined type.*Illuminate\\Support\\Facades#'
+        - '#Call to undefined method.*Illuminate\\Support\\Facades#'
+        - '#Undefined method.*Route::#'
+        - '#Undefined method.*Redirect::#'
+        - '#Undefined method.*Session::#'
