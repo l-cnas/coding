@@ -51,9 +51,4 @@ class FormController extends Controller
 
         return view('forms.post_result', ['rez' => $rez]);
     }
-
-    public function fancy()
-    {
-        return view('forms.fancy');
-    }
 }

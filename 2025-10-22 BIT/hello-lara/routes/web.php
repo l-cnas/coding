@@ -1,5 +1,5 @@
 <?php
-// @phpstan-ignore-line
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BebrasController;
 use App\Http\Controllers\BarsukasController;
@@ -24,7 +24,7 @@ Route::get('/', function () {
 });
 
 
-Route::get('/bebras', function () {
+Route::get('/bebras', function() {
     return '<h1>Labas bebrai</h1>';
 });
 
@@ -104,7 +104,6 @@ Route::post('/valyti', [S::class, 'formos3SkaiciaiValymas'])->name('valom-lauka'
 
 
 
-
 Route::prefix('/farm')->name('farm-')->group(function () {
     Route::get('/', [Farm::class, 'read'])->name('read');
     Route::get('/create', [Farm::class, 'create'])->name('create');
@@ -112,5 +111,6 @@ Route::prefix('/farm')->name('farm-')->group(function () {
     Route::get('/{id}', [Farm::class, 'show'])->name('show'); // /farm/   farm-show
     Route::get('/{id}/edit', [Farm::class, 'edit'])->name('edit');
     Route::put('/{id}', [Farm::class, 'update'])->name('update'); // /farm/{id} farm-update
+    Route::get('/{id}/delete', [Farm::class, 'delete'])->name('delete');
     Route::delete('/{id}', [Farm::class, 'destroy'])->name('destroy');
 });
