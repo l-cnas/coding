@@ -1,0 +1,598 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px;
+    font-family: Arial, sans-serif;
+    background-color: #c97d5c;
+}
+
+.topbar {
+    margin-bottom: 20px;
+}
+
+#layoutSelect {
+    padding: 6px 10px;
+    font-size: 16px;
+}
+
+#container {
+    width: 260px;
+    height: 200px;
+    border: 3px solid black;
+    background-color: #b8efc8;
+    position: relative;
+}
+
+.tile {
+    position: absolute;
+    background-color: #b8efc8;
+    border: 2px solid black;
+    display: none;
+}
+
+/* layout 1 */
+
+.layout1 .t1 {
+    display: block;
+    left: 0px;
+    top: 0px;
+    width: 60px;
+    height: 45px;
+}
+
+.layout1 .t2 {
+    display: block;
+    left: 60px;
+    top: 0px;
+    width: 30px;
+    height: 22px;
+}
+
+.layout1 .t3 {
+    display: block;
+    left: 60px;
+    top: 22px;
+    width: 30px;
+    height: 23px;
+}
+
+.layout1 .t4 {
+    display: block;
+    left: 0px;
+    top: 45px;
+    width: 90px;
+    height: 60px;
+}
+
+.layout1 .t5 {
+    display: block;
+    left: 0px;
+    top: 105px;
+    width: 90px;
+    height: 95px;
+}
+
+.layout1 .t6 {
+    display: block;
+    left: 90px;
+    top: 0px;
+    width: 170px;
+    height: 200px;
+}
+
+/* layout 2 */
+
+.layout2 .t1 {
+    display: block;
+    left: 0px;
+    top: 0px;
+    width: 55px;
+    height: 45px;
+}
+
+.layout2 .t2 {
+    display: block;
+    left: 0px;
+    top: 45px;
+    width: 55px;
+    height: 155px;
+}
+
+.layout2 .t3 {
+    display: block;
+    left: 55px;
+    top: 0px;
+    width: 95px;
+    height: 105px;
+}
+
+.layout2 .t4 {
+    display: block;
+    left: 55px;
+    top: 105px;
+    width: 95px;
+    height: 95px;
+}
+
+.layout2 .t5 {
+    display: block;
+    left: 150px;
+    top: 0px;
+    width: 50px;
+    height: 45px;
+}
+
+.layout2 .t6 {
+    display: block;
+    left: 200px;
+    top: 0px;
+    width: 60px;
+    height: 200px;
+}
+
+/* layout 3 */
+
+.layout3 .t1 {
+    display: block;
+    left: 0px;
+    top: 0px;
+    width: 30px;
+    height: 25px;
+}
+
+.layout3 .t2 {
+    display: block;
+    left: 30px;
+    top: 0px;
+    width: 60px;
+    height: 25px;
+}
+
+.layout3 .t3 {
+    display: block;
+    left: 0px;
+    top: 25px;
+    width: 90px;
+    height: 125px;
+}
+
+.layout3 .t4 {
+    display: block;
+    left: 90px;
+    top: 0px;
+    width: 170px;
+    height: 135px;
+}
+
+.layout3 .t5 {
+    display: block;
+    left: 90px;
+    top: 135px;
+    width: 55px;
+    height: 65px;
+}
+
+.layout3 .t6 {
+    display: block;
+    left: 145px;
+    top: 135px;
+    width: 55px;
+    height: 65px;
+}
+
+.layout3 .t7 {
+    display: block;
+    left: 200px;
+    top: 135px;
+    width: 60px;
+    height: 65px;
+}
+
+/* layout 4 */
+
+.layout4 .t1 {
+    display: block;
+    left: 0px;
+    top: 0px;
+    width: 170px;
+    height: 50px;
+}
+
+.layout4 .t2 {
+    display: block;
+    left: 170px;
+    top: 0px;
+    width: 90px;
+    height: 50px;
+}
+
+.layout4 .t3 {
+    display: block;
+    left: 0px;
+    top: 50px;
+    width: 80px;
+    height: 55px;
+}
+
+.layout4 .t4 {
+    display: block;
+    left: 80px;
+    top: 50px;
+    width: 180px;
+    height: 55px;
+}
+
+.layout4 .t5 {
+    display: block;
+    left: 0px;
+    top: 105px;
+    width: 170px;
+    height: 95px;
+}
+
+.layout4 .t6 {
+    display: block;
+    left: 170px;
+    top: 105px;
+    width: 90px;
+    height: 95px;
+}
+
+/* layout 5 */
+
+.layout5 .t1 {
+    display: block;
+    left: 0px;
+    top: 0px;
+    width: 30px;
+    height: 40px;
+}
+
+.layout5 .t2 {
+    display: block;
+    left: 30px;
+    top: 0px;
+    width: 60px;
+    height: 40px;
+}
+
+.layout5 .t3 {
+    display: block;
+    left: 0px;
+    top: 40px;
+    width: 90px;
+    height: 95px;
+}
+
+.layout5 .t4 {
+    display: block;
+    left: 0px;
+    top: 135px;
+    width: 30px;
+    height: 65px;
+}
+
+.layout5 .t5 {
+    display: block;
+    left: 30px;
+    top: 135px;
+    width: 60px;
+    height: 65px;
+}
+
+.layout5 .t6 {
+    display: block;
+    left: 90px;
+    top: 0px;
+    width: 170px;
+    height: 200px;
+}
+
+/* layout 6 */
+
+.layout6 .t1 {
+    display: block;
+    left: 0px;
+    top: 0px;
+    width: 55px;
+    height: 45px;
+}
+
+.layout6 .t2 {
+    display: block;
+    left: 0px;
+    top: 45px;
+    width: 55px;
+    height: 55px;
+}
+
+.layout6 .t3 {
+    display: block;
+    left: 0px;
+    top: 100px;
+    width: 55px;
+    height: 100px;
+}
+
+.layout6 .t4 {
+    display: block;
+    left: 55px;
+    top: 0px;
+    width: 205px;
+    height: 105px;
+}
+
+.layout6 .t5 {
+    display: block;
+    left: 55px;
+    top: 105px;
+    width: 205px;
+    height: 95px;
+}
+
+/* layout 7 */
+
+.layout7 .t1 {
+    display: block;
+    left: 0px;
+    top: 0px;
+    width: 60px;
+    height: 45px;
+}
+
+.layout7 .t2 {
+    display: block;
+    left: 60px;
+    top: 0px;
+    width: 30px;
+    height: 22px;
+}
+
+.layout7 .t3 {
+    display: block;
+    left: 60px;
+    top: 22px;
+    width: 30px;
+    height: 23px;
+}
+
+.layout7 .t4 {
+    display: block;
+    left: 90px;
+    top: 0px;
+    width: 170px;
+    height: 45px;
+}
+
+.layout7 .t5 {
+    display: block;
+    left: 0px;
+    top: 45px;
+    width: 75px;
+    height: 95px;
+}
+
+.layout7 .t6 {
+    display: block;
+    left: 75px;
+    top: 45px;
+    width: 140px;
+    height: 155px;
+}
+
+.layout7 .t7 {
+    display: block;
+    left: 215px;
+    top: 45px;
+    width: 45px;
+    height: 75px;
+}
+
+.layout7 .t8 {
+    display: block;
+    left: 215px;
+    top: 120px;
+    width: 45px;
+    height: 80px;
+}
+
+/* layout 8 */
+
+.layout8 .t1 {
+    display: block;
+    left: 0px;
+    top: 0px;
+    width: 40px;
+    height: 85px;
+}
+
+.layout8 .t2 {
+    display: block;
+    left: 40px;
+    top: 0px;
+    width: 35px;
+    height: 30px;
+}
+
+.layout8 .t3 {
+    display: block;
+    left: 75px;
+    top: 0px;
+    width: 35px;
+    height: 30px;
+}
+
+.layout8 .t4 {
+    display: block;
+    left: 110px;
+    top: 0px;
+    width: 35px;
+    height: 30px;
+}
+
+.layout8 .t5 {
+    display: block;
+    left: 145px;
+    top: 0px;
+    width: 115px;
+    height: 45px;
+}
+
+.layout8 .t6 {
+    display: block;
+    left: 0px;
+    top: 85px;
+    width: 40px;
+    height: 115px;
+}
+
+.layout8 .t7 {
+    display: block;
+    left: 40px;
+    top: 30px;
+    width: 105px;
+    height: 130px;
+}
+
+.layout8 .t8 {
+    display: block;
+    left: 145px;
+    top: 45px;
+    width: 115px;
+    height: 155px;
+}
+
+/* layout 9 */
+
+.layout9 .t1 {
+    display: block;
+    left: 0px;
+    top: 0px;
+    width: 85px;
+    height: 95px;
+}
+
+.layout9 .t2 {
+    display: block;
+    left: 85px;
+    top: 0px;
+    width: 70px;
+    height: 35px;
+}
+
+.layout9 .t3 {
+    display: block;
+    left: 155px;
+    top: 0px;
+    width: 105px;
+    height: 95px;
+}
+
+.layout9 .t4 {
+    display: block;
+    left: 85px;
+    top: 35px;
+    width: 70px;
+    height: 25px;
+}
+
+.layout9 .t5 {
+    display: block;
+    left: 85px;
+    top: 60px;
+    width: 35px;
+    height: 35px;
+}
+
+.layout9 .t6 {
+    display: block;
+    left: 120px;
+    top: 60px;
+    width: 35px;
+    height: 35px;
+}
+
+.layout9 .t7 {
+    display: block;
+    left: 0px;
+    top: 95px;
+    width: 40px;
+    height: 30px;
+}
+
+.layout9 .t8 {
+    display: block;
+    left: 40px;
+    top: 95px;
+    width: 140px;
+    height: 105px;
+}
+
+/* layout 10 */
+
+.layout10 .t1 {
+    display: block;
+    left: 0px;
+    top: 0px;
+    width: 80px;
+    height: 125px;
+}
+
+.layout10 .t2 {
+    display: block;
+    left: 80px;
+    top: 0px;
+    width: 70px;
+    height: 40px;
+}
+
+.layout10 .t3 {
+    display: block;
+    left: 150px;
+    top: 0px;
+    width: 110px;
+    height: 40px;
+}
+
+.layout10 .t4 {
+    display: block;
+    left: 80px;
+    top: 40px;
+    width: 35px;
+    height: 30px;
+}
+
+.layout10 .t5 {
+    display: block;
+    left: 115px;
+    top: 40px;
+    width: 35px;
+    height: 30px;
+}
+
+.layout10 .t6 {
+    display: block;
+    left: 80px;
+    top: 70px;
+    width: 35px;
+    height: 30px;
+}
+
+.layout10 .t7 {
+    display: block;
+    left: 115px;
+    top: 70px;
+    width: 35px;
+    height: 30px;
+}
+
+.layout10 .t8 {
+    display: block;
+    left: 150px;
+    top: 40px;
+    width: 110px;
+    height: 160px;
+}
