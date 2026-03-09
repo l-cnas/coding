@@ -8,11 +8,31 @@
         </div>
 
         <div class="nav-right">
-            <a href="#">Login</a>
-            <a href="#">Register</a>
+            @guest
+                <a href="{{ route('login') }}">Login</a>
+                <a href="{{ route('register') }}">Register</a>
+            @endguest
+
+            @auth
+                <div class="user-box">
+                    <span class="user-label">Logged in as:</span>
+                    <span class="user-name">{{ auth()->user()->name }}</span>
+                </div>
+
+                <a href="{{ route('settings') }}" class="icon-button">
+                    <img src="{{ asset('icons/settings.svg') }}" class="nav-icon" alt="settings">
+                </a>
+
+                <form action="{{ route('logout') }}" method="POST">
+                    @csrf
+                    <button type="submit" class="logout-button">
+                        <img src="{{ asset('icons/logout.svg') }}" class="nav-icon" alt="logout">
+                    </button>
+                </form>
+            @endauth
 
             <button id="theme-toggle" class="theme-button">
-                <img src="{{ asset('icons/lightbulb.svg') }}" id="theme-icon">
+                <img src="{{ asset('icons/lightbulb.svg') }}" id="theme-icon" alt="theme">
             </button>
         </div>
 

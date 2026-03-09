@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
 
+@php
+    $pageTitle = trim($__env->yieldContent('page_title')) ?: 'My Project';
+@endphp
+
 <head>
-    <title>My Project</title>
+    <title>{{ $pageTitle }}</title>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 
 <body>
 
-    @include('partials.header')
+    @include('partials.header', ['pageTitle' => $pageTitle])
     @include('partials.nav')
 
     <main>
@@ -16,7 +20,6 @@
     </main>
 
     @include('partials.footer')
-
 
     <script src="{{ asset('js/app.js') }}"></script>
 </body>

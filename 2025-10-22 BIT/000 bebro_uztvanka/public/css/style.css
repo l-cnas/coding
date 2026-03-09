@@ -50,6 +50,7 @@ nav {
 .nav-left {
     display: flex;
     gap: 20px;
+    align-items: center;
 }
 
 .nav-left a {
@@ -65,21 +66,47 @@ nav {
 .nav-right {
     display: flex;
     align-items: center;
+    gap: 18px;
 }
 
 .nav-right a {
     color: #ffffff;
     text-decoration: none;
     font-size: 14px;
-    margin-right: 12px;
-}
-
-.light-mode .nav-right a {
-    color: #222222;
 }
 
 .nav-right a:hover {
     text-decoration: underline;
+}
+
+.user-box {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+}
+
+.user-label {
+    color: #d4d8dc;
+}
+
+.user-name {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.logout-button {
+    padding: 6px 12px;
+    border: 1px solid #777;
+    background: transparent;
+    color: #ffffff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.logout-button:hover {
+    background: #1c232b;
 }
 
 /* THEME BUTTON */
@@ -327,7 +354,16 @@ footer {
     background: #d2d7dc;
 }
 
-.light-mode .nav-left a {
+.light-mode .nav-left a,
+.light-mode .nav-right a {
+    color: #222;
+}
+
+.light-mode .user-label {
+    color: #555;
+}
+
+.light-mode .user-name {
     color: #222;
 }
 
@@ -358,21 +394,15 @@ footer {
     background: #d9dee3;
 }
 
-/* FIX TAGS IN LIGHT MODE */
-
 .light-mode .story-tags span {
     background: #e9edf2;
     color: #222222;
 }
 
-/* FIX STATUS BADGE */
-
 .light-mode .story-status {
     background: #dff3e7;
     color: #1d6f42;
 }
-
-/* FIX INPUTS */
 
 .light-mode .story-actions input {
     background: #ffffff;
@@ -380,17 +410,17 @@ footer {
     border: 1px solid #ccc;
 }
 
-.light-mode .story-actions button {
+.light-mode .story-actions button,
+.light-mode .logout-button {
     background: #ffffff;
     color: #222;
     border: 1px solid #ccc;
 }
 
-.light-mode .story-actions button:hover {
+.light-mode .story-actions button:hover,
+.light-mode .logout-button:hover {
     background: #f1f1f1;
 }
-
-/* THEME BUTTON LIGHT MODE */
 
 .light-mode .theme-button {
     background: #ffffff;
@@ -401,9 +431,82 @@ footer {
     filter: brightness(1.3);
 }
 
-/* FOOTER LIGHT MODE */
+.light-mode .top-bar-right select {
+    background: #ffffff;
+    color: #222222;
+    border: 1px solid #cccccc;
+}
 
 .light-mode footer {
     background: #e3e6ea;
     color: #222;
+}
+
+.logout-button {
+    width: 36px;
+    height: 36px;
+    border: none;
+    background: #1c232b;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.logout-button:hover {
+    background: #2a333d;
+}
+
+.logout-icon {
+    width: 18px;
+    height: 18px;
+    opacity: 0.8;
+}
+
+.light-mode .logout-button {
+    background: #ffffff;
+}
+
+.light-mode .logout-button:hover {
+    background: #f1f1f1;
+}
+
+.icon-button {
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    background: #1c232b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.icon-button:hover {
+    background: #2a333d;
+}
+
+.nav-icon {
+    width: 18px;
+    height: 18px;
+    opacity: 0.8;
+}
+
+.light-mode .icon-button {
+    background: #ffffff;
+}
+
+.light-mode .icon-button:hover {
+    background: #f1f1f1;
+}
+
+.form-success {
+    color: #7ee081;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.light-mode .form-success {
+    color: #1d6f42;
 }

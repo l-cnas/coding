@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
+@section('page_title', 'Sharing is caring')
+
 @section('content')
     <section class="hero">
         <h2>Support real stories and ideas</h2>
