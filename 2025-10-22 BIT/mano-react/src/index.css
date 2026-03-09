@@ -54,6 +54,81 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+button.orange {
+  background-color: #ff8c00;
+}
+button.orange:hover {
+  border-color: #a1fd03;
+}
+
+button.red {
+  background-color: #ff0000;
+}
+button.red:hover {
+  border-color: #ff00ff;
+}
+
+button.green {
+  background-color: #00ff00;
+}
+button.green:hover {
+  border-color: #00ffff;
+}
+
+button.blue {
+  background-color: #0000ff;
+}
+button.blue:hover {
+  border-color: #00ffff;
+}
+
+button.yellow {
+  background-color: #ffff00;
+  color: #000000;
+}
+button.yellow:hover {
+  border-color: #ff00ff;
+}
+
+.buttons {
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.kvadratas {
+  width: 100px;
+  height: 100px;
+  border: 3px solid #ffffff;
+  border-radius: 5px;
+}
+
+.kvadratas.melynas {
+  background-color: #0000ff;
+}
+
+.kvadratas.apelsinas {
+  background-color: #ff8c00;
+}
+
+.kvadratas.citrinas {
+  background-color: #ffff00;
+}
+
+.kvadratas.melionas {
+  background-color: #00ff00;
+}
+
+.kvadrato-konteineris {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
