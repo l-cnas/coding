@@ -1,18 +1,41 @@
+import { useState } from 'react';
 import './App.css';
-import DaugA from './components/02/DaugA';
-import Mas from './components/02/Mas';
-import Plus1 from './components/02/Plus1';
-import Skaicius from './components/02/Skaicius';
+import Fun from './components/03/Fun';
+import Select from './components/03/Select';
+import Text from './components/03/Text';
+import Texts from './components/03/Texts';
+import rand from './functions/rand';
+import randColor from './functions/randColor';
+import Kv from './components/03/Kv';
+
 
 function App() {
 
+  const [sqs, setSqs] = useState([]);
+
+  const addSq = _ => {
+    const number = rand(1000, 9999);
+    const color = randColor();
+
+    setSqs(s => [...s, {number, color}]);
+
+  }
+
+
   return (
     <div className="App">
+
+      <div className="kvadrato-konteineris">
+          {
+            sqs.map(s => <Kv key={s.number + s.color} number={s.number} color={s.color}></Kv>)
+          }
+      </div>
+      <button className="green" onClick={addSq}>ADD SQ</button>
       <h1>Mano React</h1>
-      <Skaicius></Skaicius>
-      <Plus1></Plus1>
-      <DaugA></DaugA>
-      <Mas></Mas>
+          <Fun></Fun>
+          <Text></Text>
+          <Texts></Texts>
+          <Select></Select>
     </div>
   );
 }
