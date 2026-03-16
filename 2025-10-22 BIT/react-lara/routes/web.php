@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\BoxController as B;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -24,6 +25,11 @@ Route::get('/', function () {
         'phpVersion' => PHP_VERSION,
     ]);
 });
+
+Route::get('/box', [B::class, 'helloBox']);
+Route::get('/old-box', [B::class, 'helloOldBox']);
+Route::get('/get-boxes', [B::class, 'getBoxes'])->name('get-boxes');
+Route::post('/save-boxes', [B::class, 'saveBoxes'])->name('save-boxes');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
