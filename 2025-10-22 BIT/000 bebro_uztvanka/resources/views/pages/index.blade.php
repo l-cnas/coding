@@ -1,4 +1,4 @@
-@extends('layouts.app')
+{{-- @extends('layouts.app')
 
 @section('page_title', 'Sharing is caring')
 
@@ -189,5 +189,89 @@
             </div>
         </article>
 
+    </section>
+@endsection --}}
+
+
+@extends('layouts.app')
+
+@section('page_title', 'Sharing is caring')
+
+@section('content')
+    <section class="hero">
+        <h2>Support real stories and ideas</h2>
+        <p>A simple crowdfunding platform for people who need help bringing ideas to life.</p>
+    </section>
+
+    <section class="top-bar">
+        <div class="top-bar-left">
+            <button class="filter-btn">All</button>
+            <button class="filter-btn">Health</button>
+            <button class="filter-btn">Animals</button>
+            <button class="filter-btn">Community</button>
+            <button class="filter-btn">Education</button>
+        </div>
+
+        <div class="top-bar-right">
+            <label for="sort">Sort by:</label>
+            <select id="sort">
+                <option>Newest</option>
+                <option>Most liked</option>
+            </select>
+        </div>
+    </section>
+
+    <section class="stories-grid">
+        @forelse($stories as $story)
+            <article class="story-card">
+                @if ($story->main_image)
+                    <img src="{{ asset('storage/' . $story->main_image) }}" alt="Story image" class="story-main-image">
+                @else
+                    <img src="https://placehold.co/600x350" alt="Story image" class="story-main-image">
+                @endif
+
+                <div class="story-content">
+                    <div class="story-top">
+                        <span class="story-status">Active</span>
+                        <span class="story-likes">0 hearts</span>
+                    </div>
+
+                    <h3>Story #{{ $story->id }}</h3>
+
+                    <p class="story-text">
+                        {{ $story->content }}
+                    </p>
+
+                    <div class="story-money">
+                        <div><strong>Goal:</strong> {{ number_format($story->goal_amount, 2) }} €</div>
+                        <div><strong>Collected:</strong> 0 €</div>
+                        <div><strong>Remaining:</strong> {{ number_format($story->goal_amount, 2) }} €</div>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 0%;"></div>
+                    </div>
+
+                    <div class="story-tags">
+                        <span>#story</span>
+                    </div>
+
+                    <div class="donation-history">
+                        <h4>Donation history</h4>
+                        <ul>
+                            <li>No donations yet</li>
+                        </ul>
+                    </div>
+
+                    <div class="story-actions">
+                        <input type="number" placeholder="Amount">
+                        <button>Donate</button>
+                        <button>Heart</button>
+                    </div>
+                </div>
+            </article>
+        @empty
+            <p>No approved stories yet.</p>
+        @endforelse
     </section>
 @endsection

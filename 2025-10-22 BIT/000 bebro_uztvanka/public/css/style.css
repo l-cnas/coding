@@ -510,3 +510,57 @@ footer {
 .light-mode .form-success {
     color: #1d6f42;
 }
+
+.form-row textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #666;
+    border-radius: 4px;
+    background: #1a1f25;
+    color: #fff;
+    resize: vertical;
+}
+
+.light-mode .form-row textarea {
+    background: #ffffff;
+    color: #222;
+    border: 1px solid #ccc;
+}
+
+.admin-box {
+    width: 900px;
+    margin: 40px auto;
+}
+
+.admin-story-item {
+    background: #11161c;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.admin-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.admin-actions button {
+    padding: 8px 14px;
+    border: 1px solid #777;
+    background: transparent;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.light-mode .admin-story-item {
+    background: #ffffff;
+    color: #222;
+}
+
+.light-mode .admin-actions button {
+    background: #ffffff;
+    color: #222;
+    border: 1px solid #ccc;
+}
