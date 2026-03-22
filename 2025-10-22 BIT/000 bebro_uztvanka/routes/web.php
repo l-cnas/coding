@@ -5,6 +5,9 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\StoryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminStoryController;
+use App\Http\Controllers\AdminUserController;
+use App\Http\Controllers\AdminDashboardController;
+
 
 
 /*
@@ -41,3 +44,8 @@ Route::post('/stories', [StoryController::class, 'store'])->middleware('auth')->
 Route::get('/admin/stories', [AdminStoryController::class, 'index'])->middleware('auth')->name('admin.stories');
 Route::post('/admin/stories/{story}/approve', [AdminStoryController::class, 'approve'])->middleware('auth')->name('admin.stories.approve');
 Route::post('/admin/stories/{story}/delete', [AdminStoryController::class, 'delete'])->middleware('auth')->name('admin.stories.delete');
+
+Route::get('/admin/users', [AdminUserController::class, 'index'])->middleware('auth')->name('admin.users');
+Route::post('/admin/users/{user}/story-limit', [AdminUserController::class, 'updateStoryLimit'])->middleware('auth')->name('admin.users.story-limit');
+
+Route::get('/admin', [AdminDashboardController::class, 'index'])->middleware('auth')->name('admin.dashboard');

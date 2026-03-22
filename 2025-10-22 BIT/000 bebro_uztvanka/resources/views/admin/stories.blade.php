@@ -1,10 +1,10 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
-@section('page_title', 'Admin Stories')
+@section('page_title', 'Stories Approval')
 
-@section('content')
-    <div class="admin-box">
-        <h2>All Stories</h2>
+@section('admin_content')
+    <div class="admin-page-box">
+        <h2>Stories Approval</h2>
 
         @forelse($stories as $story)
             <div class="admin-story-item">

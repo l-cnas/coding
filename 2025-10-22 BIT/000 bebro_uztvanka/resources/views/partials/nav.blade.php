@@ -2,9 +2,22 @@
     <div class="nav-inner">
 
         <div class="nav-left">
-            <a href="http://localhost/coding/2025-10-22%20BIT/000%20bebro_uztvanka/public/">Home</a>
+            <a href="{{ route('home') }}">Home</a>
             <a href="#">Stories</a>
-            <a href="{{ route('stories.create') }}">Create Story</a>
+
+            @auth
+                @if (auth()->user()->is_admin)
+                    <a href="{{ route('stories.create') }}">Create Story</a>
+                @else
+                    @php
+                        $storyCount = \App\Models\Story::where('user_id', auth()->user()->id)->count();
+                    @endphp
+
+                    @if ($storyCount < auth()->user()->story_limit)
+                        <a href="{{ route('stories.create') }}">Create Story</a>
+                    @endif
+                @endif
+            @endauth
         </div>
 
         <div class="nav-right">
@@ -15,7 +28,7 @@
 
             @auth
                 @if (auth()->user()->is_admin)
-                    <a href="{{ route('admin.stories') }}">Admin</a>
+                    <a href="{{ route('admin.dashboard') }}">Administration</a>
                 @endif
                 <div class="user-box">
                     <span class="user-label">Logged in as:</span>

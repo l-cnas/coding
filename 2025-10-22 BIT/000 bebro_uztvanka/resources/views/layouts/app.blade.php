@@ -7,7 +7,7 @@
 
 <head>
     <title>{{ $pageTitle }}</title>
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    @vite(['resources/js/app.js'])
 </head>
 
 <body>

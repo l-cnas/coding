@@ -1,0 +1,25 @@
+.form-success {
+    color: #7ee081;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.form-row textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #666;
+    border-radius: 4px;
+    background: #1a1f25;
+    color: #fff;
+    resize: vertical;
+}
+
+.light-mode .form-success {
+    color: #1d6f42;
+}
+
+.light-mode .form-row textarea {
+    background: #ffffff;
+    color: #222;
+    border: 1px solid #ccc;
+}

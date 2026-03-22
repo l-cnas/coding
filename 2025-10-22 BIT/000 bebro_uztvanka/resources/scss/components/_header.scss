@@ -1,0 +1,18 @@
+header {
+    background: #2b3035;
+    padding: 20px 0;
+}
+
+.header-inner {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.light-mode header {
+    background: #e3e6ea;
+}

@@ -7,13 +7,33 @@ use Illuminate\Http\Request;
 
 class StoryController extends Controller
 {
-    public function create()
+    public function create(Request $request)
     {
+        $user = $request->user();
+
+        if (!$user->is_admin) {
+            $storyCount = Story::where('user_id', $user->id)->count();
+
+            if ($storyCount >= $user->story_limit) {
+                return redirect('/')->with('error', 'You reached your story limit.');
+            }
+        }
+
         return view('stories.create');
     }
 
     public function store(Request $request)
     {
+        $user = $request->user();
+
+        if (!$user->is_admin) {
+            $storyCount = Story::where('user_id', $user->id)->count();
+
+            if ($storyCount >= $user->story_limit) {
+                return redirect('/')->with('error', 'You reached your story limit.');
+            }
+        }
+
         $request->validate([
             'content' => 'required|string',
             'goal_amount' => 'required|numeric|min:1',
@@ -27,13 +47,13 @@ class StoryController extends Controller
         }
 
         Story::create([
-            'user_id' => $request->user()->id,
+            'user_id' => $user->id,
             'content' => $request->content,
             'goal_amount' => $request->goal_amount,
             'main_image' => $imagePath,
             'status' => 'pending',
         ]);
 
-        return redirect('/')->with('success', 'Story created successfully.');
+        return redirect('/')->with('success', 'Story created successfully and is waiting for admin approval.');
     }
 }

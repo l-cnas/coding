@@ -1,0 +1,77 @@
+nav {
+    background: #4a4f55;
+    padding: 12px 0;
+}
+
+.nav-inner {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-left {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-left a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-left a:hover {
+    text-decoration: underline;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.nav-right a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-right a:hover {
+    text-decoration: underline;
+}
+
+.user-box {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+}
+
+.user-label {
+    color: #d4d8dc;
+}
+
+.user-name {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.light-mode nav {
+    background: #d2d7dc;
+}
+
+.light-mode .nav-left a,
+.light-mode .nav-right a {
+    color: #222;
+}
+
+.light-mode .user-label {
+    color: #555;
+}
+
+.light-mode .user-name {
+    color: #222;
+}
