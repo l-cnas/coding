@@ -5,16 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class TruckBrand extends Model
+class Tag extends Model
 {
     use HasFactory;
 
     protected $fillable = ['name'];
-    public $timestamps = false; // išjungia created_at ir updated_at laukus
-
+    public $timestamps = false;
 
     public function trucks() {
-        return $this->hasMany(Truck::class, 'truck_brand_id', 'id');
+        return $this->belongsToMany(Truck::class, 'tag_trucks', 'tag_id', 'truck_id');
     }
     
 }
