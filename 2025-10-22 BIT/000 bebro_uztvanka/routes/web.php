@@ -7,6 +7,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminStoryController;
 use App\Http\Controllers\AdminUserController;
 use App\Http\Controllers\AdminDashboardController;
+use App\Http\Controllers\DonationController;
 
 
 
@@ -40,10 +41,25 @@ Route::post('/settings', [AuthController::class, 'updateSettings'])->middleware(
 
 Route::get('/stories/create', [StoryController::class, 'create'])->middleware('auth')->name('stories.create');
 Route::post('/stories', [StoryController::class, 'store'])->middleware('auth')->name('stories.store');
+Route::get('/stories/{story}', [StoryController::class, 'show'])->name('stories.show');
+Route::get('/stories/{story}/edit', [StoryController::class, 'edit'])
+    ->middleware('auth')
+    ->name('stories.edit');
+
+Route::post('/stories/{story}/update', [StoryController::class, 'update'])
+    ->middleware('auth')
+    ->name('stories.update');
+
+Route::post('/stories/{story}/donate', [DonationController::class, 'store'])
+    ->middleware('auth')
+    ->name('stories.donate');
 
 Route::get('/admin/stories', [AdminStoryController::class, 'index'])->middleware('auth')->name('admin.stories');
 Route::post('/admin/stories/{story}/approve', [AdminStoryController::class, 'approve'])->middleware('auth')->name('admin.stories.approve');
 Route::post('/admin/stories/{story}/delete', [AdminStoryController::class, 'delete'])->middleware('auth')->name('admin.stories.delete');
+Route::post('/admin/stories/{story}/tags', [AdminStoryController::class, 'updateTags'])
+    ->middleware('auth')
+    ->name('admin.stories.tags');
 
 Route::get('/admin/users', [AdminUserController::class, 'index'])->middleware('auth')->name('admin.users');
 Route::post('/admin/users/{user}/story-limit', [AdminUserController::class, 'updateStoryLimit'])->middleware('auth')->name('admin.users.story-limit');

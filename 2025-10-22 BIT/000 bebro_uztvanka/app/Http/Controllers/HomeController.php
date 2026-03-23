@@ -3,13 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\Story;
-use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        $stories = Story::where('status', 'approved')
+        $stories = Story::with(['images', 'tags', 'donations.user'])
+            ->where('status', 'approved')
             ->latest()
             ->get();
 

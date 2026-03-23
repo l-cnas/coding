@@ -23,3 +23,29 @@
     color: #222;
     border: 1px solid #ccc;
 }
+
+.form-error {
+    color: #ff7b7b;
+    font-size: 13px;
+    margin-top: 6px;
+}
+
+.tag-checkbox-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag-checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #1a1f25;
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+
+.light-mode .tag-checkbox-item {
+    background: #f4f6f8;
+    color: #222222;
+}
