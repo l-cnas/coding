@@ -20,6 +20,7 @@
                 <a href="{{ route('admin.stories') }}">Stories Approval</a>
                 <a href="{{ route('admin.users') }}">Stories Per User</a>
                 <a href="{{ route('admin.users') }}">User List</a>
+                <a href="{{ route('admin.tags') }}">Tags</a>
             </aside>
 
             <section class="admin-main">
@@ -30,7 +31,6 @@
 
     @include('partials.footer')
 
-    <script src="{{ asset('js/app.js') }}"></script>
 </body>
 
 </html>

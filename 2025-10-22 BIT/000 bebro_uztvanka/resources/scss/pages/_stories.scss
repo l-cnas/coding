@@ -11,6 +11,10 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
+.story-card-funded {
+    border: 2px solid #2f7d32;
+}
+
 .story-main-image {
     width: 100%;
     height: 220px;
@@ -35,12 +39,26 @@
     font-size: 12px;
 }
 
+.story-status-funded {
+    background: #2f7d32;
+    color: #ffffff;
+}
+
 .story-likes {
     font-size: 13px;
 }
 
 .story-card h3 {
     margin: 0 0 10px 0;
+}
+
+.story-title-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.story-title-link:hover {
+    text-decoration: underline;
 }
 
 .story-text {
@@ -80,6 +98,10 @@
     background: #0d6efd;
 }
 
+.progress-fill-funded {
+    background: #2f7d32;
+}
+
 .story-tags span {
     background: #20262d;
     padding: 4px 8px;
@@ -100,6 +122,8 @@
 .story-actions {
     display: flex;
     gap: 8px;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .story-actions input {
@@ -129,58 +153,10 @@
     gap: 8px;
 }
 
-.form-error {
-    color: #ff7b7b;
-    font-size: 13px;
-    margin-bottom: 12px;
-}
-
-.light-mode .story-card {
-    background: #ffffff;
-    color: #222;
-}
-
-.light-mode .story-text {
-    color: #444;
-}
-
-.light-mode .progress-bar {
-    background: #d9dee3;
-}
-
-.light-mode .story-tags span {
-    background: #e9edf2;
-    color: #222222;
-}
-
-.light-mode .story-status {
-    background: #dff3e7;
-    color: #1d6f42;
-}
-
-.light-mode .story-actions input {
-    background: #ffffff;
-    color: #222;
-    border: 1px solid #ccc;
-}
-
-.light-mode .story-actions button {
-    background: #ffffff;
-    color: #222;
-    border: 1px solid #ccc;
-}
-
-.light-mode .story-actions button:hover {
-    background: #f1f1f1;
-}
-
-.story-title-link {
-    color: inherit;
-    text-decoration: none;
-}
-
-.story-title-link:hover {
-    text-decoration: underline;
+.funded-note {
+    color: #7ee081;
+    font-size: 14px;
+    font-weight: bold;
 }
 
 .single-story-page {
@@ -201,54 +177,8 @@
     display: block;
 }
 
-.single-story-content {
-    padding: 20px;
-}
-
-.single-story-gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-    margin: 16px 0;
-}
-
-.single-story-gallery img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-.light-mode .single-story-card {
-    background: #ffffff;
-    color: #222222;
-}
-
-.story-title-link {
-    color: inherit;
-    text-decoration: none;
-}
-
-.story-title-link:hover {
-    text-decoration: underline;
-}
-
-.single-story-page {
-    width: 100%;
-}
-
-.single-story-card {
-    background: #11161c;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-}
-
-.single-story-main-image {
-    width: 100%;
-    max-height: 420px;
-    object-fit: cover;
-    display: block;
+.single-story-success {
+    padding: 16px 20px 0 20px;
 }
 
 .single-story-bottom {
@@ -296,11 +226,63 @@
     gap: 12px;
 }
 
+.single-story-gallery a {
+    display: block;
+}
+
 .single-story-gallery img {
     width: 100%;
     height: 220px;
     object-fit: cover;
     border-radius: 8px;
+}
+
+.light-mode .story-card {
+    background: #ffffff;
+    color: #222;
+}
+
+.light-mode .story-card-funded {
+    border: 2px solid #2f7d32;
+}
+
+.light-mode .story-text {
+    color: #444;
+}
+
+.light-mode .progress-bar {
+    background: #d9dee3;
+}
+
+.light-mode .story-tags span {
+    background: #e9edf2;
+    color: #222222;
+}
+
+.light-mode .story-status {
+    background: #dff3e7;
+    color: #1d6f42;
+}
+
+.light-mode .story-status-funded {
+    background: #2f7d32;
+    color: #ffffff;
+}
+
+.light-mode .story-actions input {
+    background: #ffffff;
+    color: #222;
+    border: 1px solid #ccc;
+}
+
+.light-mode .story-actions button {
+    background: #ffffff;
+    color: #222;
+    border: 1px solid #ccc;
+}
+
+.light-mode .story-actions button:hover {
+    background: #f1f1f1;
 }
 
 .light-mode .single-story-card {
@@ -314,10 +296,22 @@
     color: #222222;
 }
 
-.single-story-gallery a {
-    display: block;
+.story-tag-link {
+    display: inline-block;
+    background: #20262d;
+    padding: 4px 8px;
+    border-radius: 20px;
+    margin-right: 6px;
+    font-size: 12px;
+    color: inherit;
+    text-decoration: none;
 }
 
-.single-story-success {
-    padding: 16px 20px 0 20px;
+.story-tag-link:hover {
+    text-decoration: underline;
+}
+
+.light-mode .story-tag-link {
+    background: #e9edf2;
+    color: #222222;
 }

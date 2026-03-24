@@ -150,3 +150,45 @@
 .light-mode .admin-actions button:hover {
     background: #f1f1f1;
 }
+
+.admin-edit-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 14px;
+    border: 1px solid #777;
+    background: transparent;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.admin-edit-link:hover {
+    background: #2a333d;
+}
+
+.light-mode .admin-edit-link {
+    background: #ffffff;
+    color: #222222;
+    border: 1px solid #cccccc;
+}
+
+.light-mode .admin-edit-link:hover {
+    background: #f1f1f1;
+}
+
+.admin-tag-create-box {
+    margin-bottom: 24px;
+}
+
+.admin-tag-create-box h3,
+.admin-tag-list h3 {
+    margin-top: 0;
+    margin-bottom: 14px;
+}
+
+.admin-inline-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

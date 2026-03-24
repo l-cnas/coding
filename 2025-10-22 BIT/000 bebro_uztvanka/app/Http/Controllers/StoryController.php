@@ -41,6 +41,7 @@ class StoryController extends Controller
         }
 
         $request->validate([
+            'title' => 'required|string|max:255',
             'content' => 'required|string',
             'goal_amount' => 'required|numeric|min:1',
             'main_image' => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
@@ -58,6 +59,7 @@ class StoryController extends Controller
 
         $story = Story::create([
             'user_id' => $user->id,
+            'title' => $request->title,
             'content' => $request->content,
             'goal_amount' => $request->goal_amount,
             'main_image' => $imagePath,
@@ -105,7 +107,7 @@ class StoryController extends Controller
             abort(404);
         }
 
-        $story->load(['images', 'tags', 'donations.user']);
+        $story->load(['images', 'tags', 'donations.user', 'likes']);
 
         return view('stories.show', [
             'story' => $story,
@@ -145,6 +147,7 @@ class StoryController extends Controller
         }
 
         $request->validate([
+            'title' => 'required|string|max:255',
             'content' => 'required|string',
             'goal_amount' => 'required|numeric|min:1',
             'main_image' => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
@@ -158,6 +161,7 @@ class StoryController extends Controller
             $story->main_image = $request->file('main_image')->store('stories', 'public');
         }
 
+        $story->title = $request->title;
         $story->content = $request->content;
         $story->goal_amount = $request->goal_amount;
 

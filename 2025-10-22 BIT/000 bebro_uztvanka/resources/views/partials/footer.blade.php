@@ -1,5 +1,5 @@
 <footer>
     <div class="footer-inner">
-        <p>Footer</p>
+        <p>&copy; {{ date('Y') }} Sharing is caring</p>
     </div>
 </footer>

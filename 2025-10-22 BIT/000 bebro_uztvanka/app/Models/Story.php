@@ -2,12 +2,16 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Story extends Model
 {
+    use HasFactory;
+
     protected $fillable = [
         'user_id',
+        'title',
         'content',
         'goal_amount',
         'main_image',
@@ -32,5 +36,10 @@ class Story extends Model
     public function donations()
     {
         return $this->hasMany(Donation::class);
+    }
+
+    public function likes()
+    {
+        return $this->hasMany(Like::class);
     }
 }

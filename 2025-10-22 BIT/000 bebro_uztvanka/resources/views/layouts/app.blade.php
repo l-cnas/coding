@@ -1,18 +1,14 @@
 <!DOCTYPE html>
 <html>
 
-@php
-    $pageTitle = trim($__env->yieldContent('page_title')) ?: 'My Project';
-@endphp
-
 <head>
-    <title>{{ $pageTitle }}</title>
+    <title>@yield('page_title', 'My Project')</title>
     @vite(['resources/js/app.js'])
 </head>
 
 <body>
 
-    @include('partials.header', ['pageTitle' => $pageTitle])
+    @include('partials.header', ['pageTitle' => trim($__env->yieldContent('page_title')) ?: 'My Project'])
     @include('partials.nav')
 
     <main>
@@ -21,7 +17,6 @@
 
     @include('partials.footer')
 
-    <script src="{{ asset('js/app.js') }}"></script>
 </body>
 
 </html>

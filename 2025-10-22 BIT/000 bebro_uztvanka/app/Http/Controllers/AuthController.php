@@ -46,7 +46,6 @@ class AuthController extends Controller
         ]);
 
         if (Auth::attempt($credentials)) {
-
             $request->session()->regenerate();
 
             return redirect('/');
@@ -67,25 +66,84 @@ class AuthController extends Controller
         return redirect('/');
     }
 
-    public function settings()
+    public function profilePage(Request $request)
     {
-        return view('auth.settings');
+        return view('auth.settings.profile', [
+            'user' => $request->user(),
+        ]);
     }
 
-    public function updateSettings(Request $request)
+    public function accountPage(Request $request)
+    {
+        return view('auth.settings.account', [
+            'user' => $request->user(),
+        ]);
+    }
+
+    public function passwordPage(Request $request)
+    {
+        return view('auth.settings.password', [
+            'user' => $request->user(),
+        ]);
+    }
+
+    public function storiesPage(Request $request)
+    {
+        return view('auth.settings.stories', [
+            'user' => $request->user()->load('stories'),
+        ]);
+    }
+
+    public function updateProfile(Request $request)
+    {
+        $request->validate([
+            'location' => 'nullable|string|max:255',
+            'age' => 'nullable|integer|min:1|max:120',
+            'about' => 'nullable|string|max:2000',
+        ]);
+
+        $user = $request->user();
+
+        $user->location = $request->location;
+        $user->age = $request->age;
+        $user->about = $request->about;
+        $user->save();
+
+        return redirect()->route('settings.profile.page')->with('success', 'Profile details updated successfully.');
+    }
+
+    public function updateAccount(Request $request)
     {
         $request->validate([
             'name' => 'required|string|max:255',
-            'email' => 'required|email|unique:users,email,' . Auth::id(),
+            'email' => 'required|email|unique:users,email,' . $request->user()->id,
         ]);
 
         $user = $request->user();
 
         $user->name = $request->name;
         $user->email = $request->email;
-
         $user->save();
 
-        return redirect('/settings')->with('success', 'Settings updated successfully.');
+        return redirect()->route('settings.account.page')->with('success', 'Account details updated successfully.');
+    }
+
+    public function updatePassword(Request $request)
+    {
+        $request->validate([
+            'current_password' => 'required|string',
+            'password' => 'required|string|min:4|confirmed',
+        ]);
+
+        $user = $request->user();
+
+        if (!Hash::check($request->current_password, $user->password)) {
+            return redirect()->route('settings.password.page')->with('error', 'Current password is incorrect.');
+        }
+
+        $user->password = Hash::make($request->password);
+        $user->save();
+
+        return redirect()->route('settings.password.page')->with('success', 'Password updated successfully.');
     }
 }

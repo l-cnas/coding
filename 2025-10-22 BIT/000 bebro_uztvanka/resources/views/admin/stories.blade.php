@@ -13,6 +13,7 @@
         @forelse($stories as $story)
             <div class="admin-story-item">
                 <p><strong>ID:</strong> {{ $story->id }}</p>
+                <p><strong>Title:</strong> {{ $story->title }}</p>
                 <p><strong>User ID:</strong> {{ $story->user_id }}</p>
                 <p><strong>Status:</strong> {{ $story->status }}</p>
                 <p><strong>Goal:</strong> {{ number_format($story->goal_amount, 2) }} €</p>
@@ -50,6 +51,7 @@
 
                     <div class="admin-actions">
                         <button type="submit">Save tags</button>
+                        <a href="{{ route('stories.edit', $story) }}" class="admin-edit-link">Edit story</a>
                     </div>
                 </form>
 

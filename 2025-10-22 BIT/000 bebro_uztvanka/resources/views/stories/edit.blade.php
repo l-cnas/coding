@@ -10,6 +10,14 @@
             @csrf
 
             <div class="form-row">
+                <label>Story title</label>
+                <input type="text" name="title" value="{{ old('title', $story->title) }}">
+                @error('title')
+                    <p class="form-error">{{ $message }}</p>
+                @enderror
+            </div>
+
+            <div class="form-row">
                 <label>Story text</label>
                 <textarea name="content" rows="6">{{ old('content', $story->content) }}</textarea>
                 @error('content')

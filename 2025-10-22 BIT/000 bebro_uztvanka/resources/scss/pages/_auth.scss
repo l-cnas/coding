@@ -62,3 +62,115 @@
     color: #222;
     border: 1px solid #ccc;
 }
+
+.settings-page {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+.settings-sidebar {
+    background: #11161c;
+    border-radius: 10px;
+    padding: 20px;
+    position: sticky;
+    top: 20px;
+}
+
+.settings-sidebar h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.settings-sidebar a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 12px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+}
+
+.settings-sidebar a:hover {
+    background: #1c232b;
+}
+
+.settings-main {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.settings-box {
+    background: #11161c;
+    border-radius: 10px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.settings-box h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.my-story-item {
+    background: #1a1f25;
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 14px;
+}
+
+.my-story-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.my-story-actions a {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 14px;
+    border: 1px solid #777;
+    background: transparent;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.my-story-actions a:hover {
+    background: #2a333d;
+}
+
+.light-mode .settings-sidebar {
+    background: #ffffff;
+    color: #222;
+}
+
+.light-mode .settings-sidebar a {
+    color: #222;
+}
+
+.light-mode .settings-sidebar a:hover {
+    background: #f1f1f1;
+}
+
+.light-mode .settings-box {
+    background: #ffffff;
+    color: #222;
+}
+
+.light-mode .my-story-item {
+    background: #f4f6f8;
+    color: #222;
+}
+
+.light-mode .my-story-actions a {
+    background: #ffffff;
+    color: #222;
+    border: 1px solid #ccc;
+}
+
+.light-mode .my-story-actions a:hover {
+    background: #f1f1f1;
+}

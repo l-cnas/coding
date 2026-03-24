@@ -5,14 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Donation extends Model
+class Like extends Model
 {
     use HasFactory;
 
     protected $fillable = [
         'story_id',
         'user_id',
-        'amount',
     ];
 
     public function story()

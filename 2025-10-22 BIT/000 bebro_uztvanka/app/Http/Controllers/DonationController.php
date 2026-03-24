@@ -11,13 +11,15 @@ class DonationController extends Controller
     public function store(Request $request, Story $story)
     {
         $request->validate([
-            'amount' => 'required|numeric|min:1',
+            'amount' => 'required|numeric|min:1|max:9999999999.99',
         ]);
 
         $collectedAmount = $story->donations()->sum('amount');
 
         if ($collectedAmount >= $story->goal_amount) {
-            return back()->with('error', 'This story already reached its goal.');
+            return back()
+                ->with('error', 'This story already reached its goal.')
+                ->with('success_story_id', $story->id);
         }
 
         Donation::create([

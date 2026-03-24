@@ -36,6 +36,9 @@
 }
 
 .filter-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     padding: 8px 14px;
     border: 1px solid #5d646b;
     background: transparent;
@@ -43,10 +46,16 @@
     border-radius: 6px;
     cursor: pointer;
     font-size: 12px;
+    text-decoration: none;
 }
 
 .filter-btn:hover {
     background: #1c232b;
+}
+
+.filter-btn-active {
+    background: #1c232b;
+    color: #ffffff;
 }
 
 .light-mode .theme-button,
@@ -70,4 +79,10 @@
     background: #ffffff;
     color: #222;
     border: 1px solid #ccc;
+}
+
+.light-mode .filter-btn-active {
+    background: #dfe5ea;
+    color: #222222;
+    border: 1px solid #cccccc;
 }
