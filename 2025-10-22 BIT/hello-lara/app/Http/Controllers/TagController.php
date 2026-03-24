@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Tag;
+use Illuminate\Support\Str;
 
 class TagController extends Controller
 {
@@ -57,9 +58,9 @@ class TagController extends Controller
     public function delete($id) {
         $tag = Tag::findOrFail($id);
 
-        if ($tag->trucks()->count() > 0) {
-            return redirect()->route('tags-index', ['page' => request()->query('from-page', 1)])->with('info_zinute', 'Negalima ištrinti žymės, nes ji priskirta sunkvežimiams');
-        }
+        // if ($tag->trucks()->count() > 0) {
+        //     return redirect()->route('tags-index', ['page' => request()->query('from-page', 1)])->with('info_zinute', 'Negalima ištrinti žymės, nes ji priskirta sunkvežimiams');
+        // }
 
         $fromPage = request()->query('from-page', 1);
         return view('tags.delete', compact('tag', 'fromPage'));
@@ -72,4 +73,51 @@ class TagController extends Controller
         $fromPage = request()->query('from-page', 1);
         return redirect()->route('tags-index', ['page' => $fromPage])->with('success_zinute', 'Žymė sėkmingai ištrinta');
     }
+
+
+    public function addToTruck(Request $request, $id) {
+        
+        $tagName = $request->input('tag_name');
+
+        // slugify name
+        $tagName = Str::slug($tagName);
+
+        $truckId = $id;
+
+        $tag = Tag::where('name', $tagName)->first();
+        /*
+
+        The Query Builder Pattern
+
+        The expression uses method chaining, a common pattern in Laravel. 
+        It starts with Tag::where(...), which begins constructing a database 
+        query against the tags table (implied by the Tag model). The where() method adds a 
+        condition to filter results.
+
+        */
+
+        if (!$tag) {
+            // create new tag if it doesn't exist
+            $tag = Tag::create(['name' => $tagName]);
+        }
+
+        if (!$tag->trucks()->where('trucks.id', $truckId)->exists()) {
+            $tag->trucks()->attach($truckId); // prideda įrašą į tarpinę lentelę, kuris susieja tagą su sunkvežimiu
+            return redirect()->back()->with('success_zinute', 'Žymė sėkmingai pridėta prie sunkvežimio');
+        }
+
+        return redirect()->back()->with('info_zinute', 'Žymė jau priskirta šiam sunkvežimiui');
+    }
+
+    public function removeFromTruck($tag_id, $truck_id) {
+        $tag = Tag::findOrFail($tag_id); // tagas kuris bus pašalintas iš sunkvežimio
+        $tag->trucks()->detach($truck_id); // pašalina įrašą iš tarpinės lentelės, kuris susieja tagą su sunkvežimiu
+
+        // atvirkščiai, galima būtų rasti sunkvežimį ir naudoti detach metodą iš sunkvežimio pusės:
+        // $truck = Truck::findOrFail($truck_id);
+        // $truck->tags()->detach($tag_id);
+
+        return redirect()->back()->with('success_zinute', 'Žymė sėkmingai pašalinta iš sunkvežimio');
+    }
+
 }
