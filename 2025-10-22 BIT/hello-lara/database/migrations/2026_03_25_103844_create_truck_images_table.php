@@ -11,10 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('truck_brands', function (Blueprint $table) {
+        Schema::create('truck_images', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('logo_image')->nullable();
+            $table->string('image_path');
+            $table->unsignedBigInteger('truck_id');
+            $table->foreign('truck_id')->references('id')->on('trucks')->onDelete('restrict');
         });
     }
 
@@ -23,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('truck_brands');
+        Schema::dropIfExists('truck_images');
     }
 };

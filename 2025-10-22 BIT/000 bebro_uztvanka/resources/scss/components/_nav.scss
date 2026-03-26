@@ -4,11 +4,26 @@ nav {
 }
 
 .nav-inner {
-    width: 1200px;
+    width: min(100% - 32px, 1200px);
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
+}
+
+.nav-mobile-top {
+    display: none;
+}
+
+.nav-toggle {
+    display: none;
+    padding: 8px 14px;
+    border: 1px solid #777;
+    background: #1c232b;
+    color: #ffffff;
+    border-radius: 6px;
+    cursor: pointer;
 }
 
 .nav-left {
@@ -74,4 +89,113 @@ nav {
 
 .light-mode .user-name {
     color: #222;
+}
+
+.light-mode .nav-toggle {
+    background: #ffffff;
+    color: #222;
+    border: 1px solid #ccc;
+}
+
+@media (max-width: 1024px) {
+    .nav-inner {
+        width: min(100% - 24px, 980px);
+        gap: 14px;
+    }
+
+    .nav-left {
+        gap: 14px;
+    }
+
+    .nav-right {
+        gap: 12px;
+    }
+
+    .nav-left a,
+    .nav-right a,
+    .user-box {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 767px) {
+    nav {
+        padding: 10px 0;
+    }
+
+    .nav-inner {
+        width: min(100% - 16px, 100%);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .nav-mobile-top {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .nav-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: calc(50% - 5px);
+    }
+
+    .nav-left,
+    .nav-right {
+        display: none;
+        background: #3f4449;
+        padding: 12px;
+        border-radius: 8px;
+    }
+
+    .nav-left.nav-open {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .nav-right.nav-open {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .nav-left a {
+        display: block;
+        width: 100%;
+    }
+
+    .nav-right>a:first-child {
+        width: 100%;
+    }
+
+    .nav-right .user-box {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    .nav-right form {
+        width: auto;
+        margin: 0;
+    }
+
+    .nav-right .icon-button,
+    .nav-right .logout-button,
+    .nav-right .theme-button {
+        width: 36px;
+        height: 36px;
+        flex: 0 0 auto;
+    }
+
+    .light-mode .nav-left,
+    .light-mode .nav-right {
+        background: #e6eaee;
+    }
 }

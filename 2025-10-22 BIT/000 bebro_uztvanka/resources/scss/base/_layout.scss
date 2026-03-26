@@ -6,7 +6,20 @@ body {
 }
 
 main {
-    width: 1200px;
+    width: min(100% - 32px, 1200px);
     margin: 0 auto;
     padding-top: 20px;
+}
+
+@media (max-width: 1024px) {
+    main {
+        width: min(100% - 24px, 980px);
+    }
+}
+
+@media (max-width: 767px) {
+    main {
+        width: min(100% - 16px, 100%);
+        padding-top: 16px;
+    }
 }

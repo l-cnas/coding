@@ -5,11 +5,28 @@ footer {
 }
 
 .footer-inner {
-    width: 1200px;
+    width: min(100% - 32px, 1200px);
     margin: 0 auto;
 }
 
 .light-mode footer {
     background: #e3e6ea;
     color: #222;
+}
+
+@media (max-width: 1024px) {
+    .footer-inner {
+        width: min(100% - 24px, 980px);
+    }
+}
+
+@media (max-width: 767px) {
+    footer {
+        padding: 16px 0;
+        margin-top: 24px;
+    }
+
+    .footer-inner {
+        width: min(100% - 16px, 100%);
+    }
 }

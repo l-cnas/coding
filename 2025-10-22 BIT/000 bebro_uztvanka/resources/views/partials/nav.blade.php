@@ -1,6 +1,16 @@
 <nav>
     <div class="nav-inner">
-        <div class="nav-left">
+        <div class="nav-mobile-top">
+            <button class="nav-toggle" type="button" data-target="nav-left-menu">
+                Menu
+            </button>
+
+            <button class="nav-toggle" type="button" data-target="nav-right-menu">
+                Account
+            </button>
+        </div>
+
+        <div class="nav-left" id="nav-left-menu">
             <a href="{{ route('home') }}">Home</a>
             <a href="{{ route('home') }}">Stories</a>
 
@@ -19,7 +29,7 @@
             @endauth
         </div>
 
-        <div class="nav-right">
+        <div class="nav-right" id="nav-right-menu">
             @auth
                 @if (auth()->user()->is_admin)
                     <a href="{{ route('admin.dashboard') }}">Administration</a>

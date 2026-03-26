@@ -26,4 +26,17 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
+
+    const navButtons = document.querySelectorAll('.nav-toggle');
+
+    navButtons.forEach((button) => {
+        button.addEventListener('click', function () {
+            const targetId = this.getAttribute('data-target');
+            const target = document.getElementById(targetId);
+
+            if (target) {
+                target.classList.toggle('nav-open');
+            }
+        });
+    });
 });

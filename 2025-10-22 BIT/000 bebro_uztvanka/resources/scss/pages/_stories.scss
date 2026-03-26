@@ -1,7 +1,7 @@
 .stories-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
 }
 
 .story-card {
@@ -29,6 +29,7 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
+    gap: 10px;
 }
 
 .story-status {
@@ -46,10 +47,12 @@
 
 .story-likes {
     font-size: 13px;
+    white-space: nowrap;
 }
 
 .story-card h3 {
     margin: 0 0 10px 0;
+    font-size: 18px;
 }
 
 .story-title-link {
@@ -71,12 +74,14 @@
     display: flex;
     gap: 10px;
     margin-bottom: 14px;
+    flex-wrap: wrap;
 }
 
 .story-gallery img {
     width: 60px;
     height: 45px;
     border-radius: 6px;
+    object-fit: cover;
 }
 
 .story-money {
@@ -102,12 +107,31 @@
     background: #2f7d32;
 }
 
+.story-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
 .story-tags span {
     background: #20262d;
     padding: 4px 8px;
     border-radius: 20px;
-    margin-right: 6px;
     font-size: 12px;
+}
+
+.story-tag-link {
+    display: inline-block;
+    background: #20262d;
+    padding: 4px 8px;
+    border-radius: 20px;
+    font-size: 12px;
+    color: inherit;
+    text-decoration: none;
+}
+
+.story-tag-link:hover {
+    text-decoration: underline;
 }
 
 .donation-history {
@@ -151,6 +175,7 @@
 .donation-form {
     display: flex;
     gap: 8px;
+    flex-wrap: wrap;
 }
 
 .funded-note {
@@ -285,6 +310,11 @@
     background: #f1f1f1;
 }
 
+.light-mode .story-tag-link {
+    background: #e9edf2;
+    color: #222222;
+}
+
 .light-mode .single-story-card {
     background: #ffffff;
     color: #222222;
@@ -296,22 +326,72 @@
     color: #222222;
 }
 
-.story-tag-link {
-    display: inline-block;
-    background: #20262d;
-    padding: 4px 8px;
-    border-radius: 20px;
-    margin-right: 6px;
-    font-size: 12px;
-    color: inherit;
-    text-decoration: none;
+@media (max-width: 1024px) {
+    .stories-grid {
+        gap: 12px;
+    }
+
+    .story-main-image {
+        height: 180px;
+    }
+
+    .story-content {
+        padding: 12px;
+    }
+
+    .story-card h3 {
+        font-size: 16px;
+    }
+
+    .story-text,
+    .story-money,
+    .donation-history,
+    .story-actions,
+    .story-likes {
+        font-size: 13px;
+    }
+
+    .single-story-bottom {
+        grid-template-columns: 320px 1fr;
+        gap: 16px;
+    }
+
+    .single-story-gallery img {
+        height: 180px;
+    }
 }
 
-.story-tag-link:hover {
-    text-decoration: underline;
-}
+@media (max-width: 767px) {
+    .top-bar {
+        flex-direction: column;
+        gap: 12px;
+        align-items: stretch;
+    }
 
-.light-mode .story-tag-link {
-    background: #e9edf2;
-    color: #222222;
+    .top-bar-left,
+    .top-bar-right {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .stories-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .story-main-image {
+        height: 220px;
+    }
+
+    .single-story-bottom {
+        grid-template-columns: 1fr;
+        padding: 16px;
+    }
+
+    .single-story-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .single-story-gallery img {
+        height: 220px;
+    }
 }

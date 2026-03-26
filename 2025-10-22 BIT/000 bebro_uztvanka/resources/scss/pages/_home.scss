@@ -17,11 +17,28 @@
 .top-bar {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
     margin-bottom: 20px;
 }
 
 .top-bar-left,
 .top-bar-right {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.top-bar-left {
+    flex-wrap: wrap;
+    flex: 1;
+}
+
+.top-bar-right {
+    flex-shrink: 0;
+}
+
+.top-bar-right form {
     display: flex;
     gap: 10px;
     align-items: center;
@@ -47,4 +64,47 @@
     background: #ffffff;
     color: #222222;
     border: 1px solid #cccccc;
+}
+
+@media (max-width: 1024px) {
+    .hero {
+        padding: 22px;
+    }
+
+    .top-bar {
+        gap: 12px;
+    }
+
+    .top-bar-left,
+    .top-bar-right,
+    .top-bar-right form {
+        gap: 8px;
+    }
+
+    .top-bar-right label,
+    .top-bar-right select {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero {
+        padding: 18px;
+    }
+
+    .top-bar {
+        flex-direction: column;
+        gap: 12px;
+        align-items: stretch;
+    }
+
+    .top-bar-left,
+    .top-bar-right {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .top-bar-right form {
+        flex-wrap: wrap;
+    }
 }

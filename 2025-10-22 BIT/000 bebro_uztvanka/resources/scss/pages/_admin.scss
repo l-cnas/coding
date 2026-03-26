@@ -1,6 +1,5 @@
 .admin-panel {
-    width: 1200px;
-    margin: 0 auto;
+    width: 100%;
     display: flex;
     gap: 20px;
     align-items: flex-start;
@@ -34,6 +33,7 @@
 
 .admin-main {
     flex: 1;
+    min-width: 0;
 }
 
 .admin-page-box {
@@ -83,6 +83,7 @@
     gap: 10px;
     margin-top: 12px;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .admin-actions input {
@@ -105,6 +106,39 @@
 
 .admin-actions button:hover {
     background: #2a333d;
+}
+
+.admin-edit-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 14px;
+    border: 1px solid #777;
+    background: transparent;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.admin-edit-link:hover {
+    background: #2a333d;
+}
+
+.admin-tag-create-box {
+    margin-bottom: 24px;
+}
+
+.admin-tag-create-box h3,
+.admin-tag-list h3 {
+    margin-top: 0;
+    margin-bottom: 14px;
+}
+
+.admin-inline-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 .light-mode .admin-sidebar {
@@ -151,22 +185,6 @@
     background: #f1f1f1;
 }
 
-.admin-edit-link {
-    display: inline-flex;
-    align-items: center;
-    padding: 8px 14px;
-    border: 1px solid #777;
-    background: transparent;
-    color: #fff;
-    border-radius: 4px;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.admin-edit-link:hover {
-    background: #2a333d;
-}
-
 .light-mode .admin-edit-link {
     background: #ffffff;
     color: #222222;
@@ -177,18 +195,31 @@
     background: #f1f1f1;
 }
 
-.admin-tag-create-box {
-    margin-bottom: 24px;
+@media (max-width: 1024px) {
+    .admin-sidebar {
+        width: 220px;
+        padding: 16px;
+    }
+
+    .admin-page-box {
+        padding: 16px;
+    }
+
+    .admin-stat-card {
+        width: 200px;
+    }
 }
 
-.admin-tag-create-box h3,
-.admin-tag-list h3 {
-    margin-top: 0;
-    margin-bottom: 14px;
-}
+@media (max-width: 767px) {
+    .admin-panel {
+        flex-direction: column;
+    }
 
-.admin-inline-form {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    .admin-sidebar {
+        width: 100%;
+    }
+
+    .admin-stat-card {
+        width: 100%;
+    }
 }

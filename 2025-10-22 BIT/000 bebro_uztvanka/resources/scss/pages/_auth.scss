@@ -1,5 +1,5 @@
 .auth-box {
-    width: 420px;
+    width: min(100%, 420px);
     margin: 40px auto;
     padding: 24px;
     border-radius: 10px;
@@ -44,23 +44,6 @@
     color: #ff7b7b;
     font-size: 13px;
     margin-top: 6px;
-}
-
-.light-mode .auth-box {
-    background: #ffffff;
-    color: #222;
-}
-
-.light-mode .form-row input {
-    background: #ffffff;
-    color: #222;
-    border: 1px solid #ccc;
-}
-
-.light-mode .auth-box button {
-    background: #ffffff;
-    color: #222;
-    border: 1px solid #ccc;
 }
 
 .settings-page {
@@ -125,6 +108,7 @@
     display: flex;
     gap: 12px;
     margin-top: 12px;
+    flex-wrap: wrap;
 }
 
 .my-story-actions a {
@@ -140,6 +124,23 @@
 
 .my-story-actions a:hover {
     background: #2a333d;
+}
+
+.light-mode .auth-box {
+    background: #ffffff;
+    color: #222;
+}
+
+.light-mode .form-row input {
+    background: #ffffff;
+    color: #222;
+    border: 1px solid #ccc;
+}
+
+.light-mode .auth-box button {
+    background: #ffffff;
+    color: #222;
+    border: 1px solid #ccc;
 }
 
 .light-mode .settings-sidebar {
@@ -173,4 +174,30 @@
 
 .light-mode .my-story-actions a:hover {
     background: #f1f1f1;
+}
+
+@media (max-width: 1024px) {
+    .settings-page {
+        grid-template-columns: 220px 1fr;
+        gap: 16px;
+    }
+
+    .settings-box {
+        padding: 18px;
+    }
+}
+
+@media (max-width: 767px) {
+    .auth-box {
+        margin: 20px auto;
+        padding: 18px;
+    }
+
+    .settings-page {
+        grid-template-columns: 1fr;
+    }
+
+    .settings-sidebar {
+        position: static;
+    }
 }
